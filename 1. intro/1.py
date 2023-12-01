@@ -1,4 +1,4 @@
-file = open('shakespeare.txt')
+file = open('../shakespeare.txt')
 lines = file.readlines()
 ###########################################
 def valid(char):
@@ -21,7 +21,6 @@ for i in range(len(lines)):
     lines[i] = "".join(lines[i])
 titles = lines[9:53]        #put titles in variable
 lines = lines[54:]          #remove titles
-
 ###########################################
 for i in range(len(titles)):
     start = lines.index(titles[i])
@@ -30,7 +29,7 @@ for i in range(len(titles)):
         chap1 = lines[start:end]
     else:
         chap1 = lines[start:]
-    file2 = open(f"./BOOKS/{i+1}. {titles[i]}.txt", "w")
+    file2 = open(f"../BOOKS/{i+1}. {titles[i]}.txt", "w")
     for x in chap1:
         file2.write(x+"\n")
     file2.close()

@@ -1,6 +1,6 @@
 import os
 ########################################################
-filesNames = os.listdir("./BOOKS")
+filesNames = os.listdir("../BOOKS")
 filesNames = sorted(
     filesNames, 
     key=lambda x: int(x.split(".")[0])
@@ -8,7 +8,7 @@ filesNames = sorted(
 #remove this line
 filesNames = filesNames[41:42]
 ########################################################
-files = [ open(f"BOOKS/{x}", "r") for x in filesNames ]
+files = [ open(f"../BOOKS/{x}", "r") for x in filesNames ]
 datas = [ x.readlines() for x in files ]
 ########################################################
 def preproc(book):
